@@ -1,0 +1,642 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="TODO:">
+    <meta name="author" content="The uDALES Team" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>timedepsw &ndash; uDALES</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">uDALES </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/absint.html">Abstract Interfaces</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/namelists.html">Namelists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/dalesurban.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>timedepsw
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.2% of total for procedures.">23 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/modtimedep.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/modtimedep.f90.html'>modtimedep.f90</a></li>
+                <li class="breadcrumb-item"><a href='../module/modtimedep.html'>modtimedep</a></li>
+            <li class="breadcrumb-item active" aria-current="page">timedepsw</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/timedepsw.html#src">timedepsw</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>private  subroutine timedepsw()  
+</h2>
+        <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='../module/initfac.html'>initfac</a></li>
+                  <li class="list-inline-item"><a href='../module/modeb.html'>modEB</a></li>
+                  <li class="list-inline-item"><a href='../module/modglobal.html'>modglobal</a></li>
+                  <li class="list-inline-item"><a href='../module/modmpi.html'>modmpi</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.50.0 (0)
+ -->
+<!-- Title: proc~~timedepsw~~UsesGraph Pages: 1 -->
+<svg id="proctimedepswUsesGraph" width="364pt" height="175pt"
+ viewBox="0.00 0.00 364.00 175.35" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~timedepsw~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 171.35)">
+<title>proc~~timedepsw~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-171.35 360,-171.35 360,4 -4,4"/>
+<!-- proc~timedepsw -->
+<g id="proc~~timedepsw~~UsesGraph_node1" class="node">
+<title>proc~timedepsw</title>
+<polygon fill="none" stroke="black" points="356,-105 286,-105 286,-81 356,-81 356,-105"/>
+<text text-anchor="middle" x="321" y="-90.6" font-family="Helvetica,sans-Serif" font-size="10.50">timedepsw</text>
+</g>
+<!-- module~initfac -->
+<g id="proc~~timedepsw~~UsesGraph_node2" class="node">
+<title>module~initfac</title>
+<g id="a_proc~~timedepsw~~UsesGraph_node2"><a xlink:href="../module/initfac.html" xlink:title="initfac">
+<polygon fill="#337ab7" stroke="#337ab7" points="250,-85 196,-85 196,-61 250,-61 250,-85"/>
+<text text-anchor="middle" x="223" y="-70.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">initfac</text>
+</a>
+</g>
+</g>
+<!-- proc~timedepsw&#45;&gt;module~initfac -->
+<g id="proc~~timedepsw~~UsesGraph_edge1" class="edge">
+<title>proc~timedepsw&#45;&gt;module~initfac</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M285.88,-85.89C277.53,-84.15 268.56,-82.28 260.12,-80.53"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="260.66,-77.06 250.16,-78.45 259.24,-83.92 260.66,-77.06"/>
+</g>
+<!-- module~modeb -->
+<g id="proc~~timedepsw~~UsesGraph_node3" class="node">
+<title>module~modeb</title>
+<g id="a_proc~~timedepsw~~UsesGraph_node3"><a xlink:href="../module/modeb.html" xlink:title="modEB">
+<polygon fill="#337ab7" stroke="#337ab7" points="250,-165 196,-165 196,-141 250,-141 250,-165"/>
+<text text-anchor="middle" x="223" y="-150.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">modEB</text>
+</a>
+</g>
+</g>
+<!-- proc~timedepsw&#45;&gt;module~modeb -->
+<g id="proc~~timedepsw~~UsesGraph_edge2" class="edge">
+<title>proc~timedepsw&#45;&gt;module~modeb</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M300.57,-105.14C286.65,-113.84 267.68,-125.7 252.11,-135.43"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="250.02,-132.61 243.4,-140.88 253.73,-138.54 250.02,-132.61"/>
+</g>
+<!-- module~modglobal -->
+<g id="proc~~timedepsw~~UsesGraph_node4" class="node">
+<title>module~modglobal</title>
+<g id="a_proc~~timedepsw~~UsesGraph_node4"><a xlink:href="../module/modglobal.html" xlink:title="modglobal">
+<polygon fill="#337ab7" stroke="#337ab7" points="160,-146 90,-146 90,-122 160,-122 160,-146"/>
+<text text-anchor="middle" x="125" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">modglobal</text>
+</a>
+</g>
+</g>
+<!-- proc~timedepsw&#45;&gt;module~modglobal -->
+<g id="proc~~timedepsw~~UsesGraph_edge3" class="edge">
+<title>proc~timedepsw&#45;&gt;module~modglobal</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M285.76,-100.24C253.59,-107.04 205.26,-117.25 170.19,-124.66"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="169.28,-121.28 160.22,-126.77 170.73,-128.12 169.28,-121.28"/>
+</g>
+<!-- module~modmpi -->
+<g id="proc~~timedepsw~~UsesGraph_node5" class="node">
+<title>module~modmpi</title>
+<g id="a_proc~~timedepsw~~UsesGraph_node5"><a xlink:href="../module/modmpi.html" xlink:title="modmpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="153.5,-24 96.5,-24 96.5,0 153.5,0 153.5,-24"/>
+<text text-anchor="middle" x="125" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">modmpi</text>
+</a>
+</g>
+</g>
+<!-- proc~timedepsw&#45;&gt;module~modmpi -->
+<g id="proc~~timedepsw~~UsesGraph_edge4" class="edge">
+<title>proc~timedepsw&#45;&gt;module~modmpi</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M301.87,-80.9C288.07,-72.06 268.38,-60.23 250,-52 221.87,-39.41 188.57,-28.89 163.56,-21.81"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="164.3,-18.38 153.73,-19.08 162.43,-25.12 164.3,-18.38"/>
+</g>
+<!-- module~initfac&#45;&gt;module~modglobal -->
+<g id="proc~~timedepsw~~UsesGraph_edge5" class="edge">
+<title>module~initfac&#45;&gt;module~modglobal</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M203.34,-85.17C191.06,-93.15 174.62,-103.77 160,-113 158.28,-114.08 156.52,-115.19 154.73,-116.31"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="152.46,-113.6 145.82,-121.85 156.16,-119.54 152.46,-113.6"/>
+</g>
+<!-- module~initfac&#45;&gt;module~modmpi -->
+<g id="proc~~timedepsw~~UsesGraph_edge6" class="edge">
+<title>module~initfac&#45;&gt;module~modmpi</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M203.03,-60.95C188.96,-52.01 169.57,-39.68 153.75,-29.64"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="155.24,-26.44 144.93,-24.03 151.49,-32.34 155.24,-26.44"/>
+</g>
+<!-- mpi -->
+<g id="proc~~timedepsw~~UsesGraph_node6" class="node">
+<title>mpi</title>
+<g id="a_proc~~timedepsw~~UsesGraph_node6"><a xlink:href="http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm" xlink:title="mpi">
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-64 0,-64 0,-40 54,-40 54,-64"/>
+<text text-anchor="middle" x="27" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mpi</text>
+</a>
+</g>
+</g>
+<!-- module~initfac&#45;&gt;mpi -->
+<g id="proc~~timedepsw~~UsesGraph_edge7" class="edge">
+<title>module~initfac&#45;&gt;mpi</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M195.84,-70.17C161.9,-66.49 102.52,-60.07 64.25,-55.92"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="64.38,-52.42 54.06,-54.82 63.62,-59.38 64.38,-52.42"/>
+</g>
+<!-- netcdf -->
+<g id="proc~~timedepsw~~UsesGraph_node7" class="node">
+<title>netcdf</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="152,-104 98,-104 98,-80 152,-80 152,-104"/>
+<text text-anchor="middle" x="125" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">netcdf</text>
+</g>
+<!-- module~initfac&#45;&gt;netcdf -->
+<g id="proc~~timedepsw~~UsesGraph_edge8" class="edge">
+<title>module~initfac&#45;&gt;netcdf</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M195.77,-78.19C185.4,-80.24 173.31,-82.64 162.13,-84.85"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="161.33,-81.44 152.2,-86.81 162.69,-88.31 161.33,-81.44"/>
+</g>
+<!-- module~modeb&#45;&gt;module~modglobal -->
+<g id="proc~~timedepsw~~UsesGraph_edge9" class="edge">
+<title>module~modeb&#45;&gt;module~modglobal</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M195.77,-147.81C187.78,-146.23 178.77,-144.45 169.95,-142.7"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="170.62,-139.26 160.13,-140.76 169.26,-146.13 170.62,-139.26"/>
+</g>
+<!-- module~modeb&#45;&gt;mpi -->
+<g id="proc~~timedepsw~~UsesGraph_edge10" class="edge">
+<title>module~modeb&#45;&gt;mpi</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M195.79,-160.76C167.69,-167.47 122.72,-173.5 90,-155 59.32,-137.66 42.13,-98.37 33.99,-73.64"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="37.33,-72.57 31.05,-64.04 30.64,-74.63 37.33,-72.57"/>
+</g>
+<!-- module~modmpi&#45;&gt;mpi -->
+<g id="proc~~timedepsw~~UsesGraph_edge11" class="edge">
+<title>module~modmpi&#45;&gt;mpi</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M96.49,-23.46C86.21,-27.75 74.38,-32.68 63.47,-37.22"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="62.08,-34.01 54.19,-41.09 64.77,-40.47 62.08,-34.01"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.50.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+    <h3>Arguments</h3>
+    <em>None</em>
+    <br>
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Called by</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.50.0 (0)
+ -->
+<!-- Title: proc~~timedepsw~~CalledByGraph Pages: 1 -->
+<svg id="proctimedepswCalledByGraph" width="401pt" height="52pt"
+ viewBox="0.00 0.00 401.00 52.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~timedepsw~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 48)">
+<title>proc~~timedepsw~~CalledByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-48 397,-48 397,4 -4,4"/>
+<!-- proc~timedepsw -->
+<g id="proc~~timedepsw~~CalledByGraph_node1" class="node">
+<title>proc~timedepsw</title>
+<polygon fill="none" stroke="black" points="393,-44 323,-44 323,-20 393,-20 393,-44"/>
+<text text-anchor="middle" x="358" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50">timedepsw</text>
+</g>
+<!-- proc~timedep -->
+<g id="proc~~timedepsw~~CalledByGraph_node2" class="node">
+<title>proc~timedep</title>
+<g id="a_proc~~timedepsw~~CalledByGraph_node2"><a xlink:href="../proc/timedep.html" xlink:title="timedep">
+<polygon fill="#d9534f" stroke="#d9534f" points="287,-44 230,-44 230,-20 287,-20 287,-44"/>
+<text text-anchor="middle" x="258.5" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">timedep</text>
+</a>
+</g>
+</g>
+<!-- proc~timedep&#45;&gt;proc~timedepsw -->
+<g id="proc~~timedepsw~~CalledByGraph_edge1" class="edge">
+<title>proc~timedep&#45;&gt;proc~timedepsw</title>
+<path fill="none" stroke="#ff0000" d="M287.18,-32C295.11,-32 303.96,-32 312.63,-32"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="312.65,-35.5 322.65,-32 312.65,-28.5 312.65,-35.5"/>
+</g>
+<!-- proc~inittimedep -->
+<g id="proc~~timedepsw~~CalledByGraph_node3" class="node">
+<title>proc~inittimedep</title>
+<g id="a_proc~~timedepsw~~CalledByGraph_node3"><a xlink:href="../proc/inittimedep.html" xlink:title="inittimedep">
+<polygon fill="#d9534f" stroke="#d9534f" points="194,-24 121,-24 121,0 194,0 194,-24"/>
+<text text-anchor="middle" x="157.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">inittimedep</text>
+</a>
+</g>
+</g>
+<!-- proc~inittimedep&#45;&gt;proc~timedep -->
+<g id="proc~~timedepsw~~CalledByGraph_edge2" class="edge">
+<title>proc~inittimedep&#45;&gt;proc~timedep</title>
+<path fill="none" stroke="#ff0000" d="M194.24,-19.22C202.59,-20.91 211.5,-22.71 219.93,-24.41"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="219.4,-27.87 229.89,-26.42 220.78,-21.01 219.4,-27.87"/>
+</g>
+<!-- program~dalesurban -->
+<g id="proc~~timedepsw~~CalledByGraph_node4" class="node">
+<title>program~dalesurban</title>
+<g id="a_proc~~timedepsw~~CalledByGraph_node4"><a xlink:href="../program/dalesurban.html" xlink:title="DALESURBAN">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="85,-44 0,-44 0,-20 85,-20 85,-44"/>
+<text text-anchor="middle" x="42.5" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DALESURBAN</text>
+</a>
+</g>
+</g>
+<!-- program~dalesurban&#45;&gt;proc~timedep -->
+<g id="proc~~timedepsw~~CalledByGraph_edge3" class="edge">
+<title>program~dalesurban&#45;&gt;proc~timedep</title>
+<path fill="none" stroke="#ff0000" d="M85.33,-32.64C96.88,-32.79 109.43,-32.93 121,-33 153.44,-33.21 161.56,-33.26 194,-33 202.39,-32.93 211.4,-32.82 219.92,-32.69"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="220.05,-36.19 230,-32.53 219.94,-29.19 220.05,-36.19"/>
+</g>
+<!-- program~dalesurban&#45;&gt;proc~inittimedep -->
+<g id="proc~~timedepsw~~CalledByGraph_edge4" class="edge">
+<title>program~dalesurban&#45;&gt;proc~inittimedep</title>
+<path fill="none" stroke="#ff0000" d="M85.26,-24.61C93.57,-23.14 102.34,-21.59 110.78,-20.09"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="111.62,-23.5 120.85,-18.31 110.4,-16.61 111.62,-23.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CalledByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CalledByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.50.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.86 0.86) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 741.5,-28 741.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="374,-24 244,-24 244,0 374,0 374,-24"/>
+<text text-anchor="middle" x="309" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="537.5,-24 392.5,-24 392.5,0 537.5,0 537.5,-24"/>
+<text text-anchor="middle" x="465" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="614,-24 556,-24 556,0 614,0 614,-24"/>
+<text text-anchor="middle" x="585" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="737.5,-24 632.5,-24 632.5,0 737.5,0 737.5,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="w">  </span><span class="k">subroutine </span><span class="n">timedepsw</span>
+<span class="w">    </span><span class="k">use </span><span class="n">modglobal</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">timee</span><span class="p">,</span><span class="w"> </span><span class="n">nfcts</span><span class="p">,</span><span class="w"> </span><span class="n">rk3step</span>
+<span class="w">    </span><span class="k">use </span><span class="n">initfac</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">netsw</span>
+<span class="w">    </span><span class="k">use </span><span class="n">modEB</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">tnextEB</span>
+<span class="w">    </span><span class="k">use </span><span class="n">modmpi</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">myid</span>
+
+<span class="w">    </span><span class="k">implicit none</span>
+<span class="k">    </span><span class="kt">integer </span><span class="n">t</span><span class="p">,</span><span class="n">n</span>
+<span class="w">    </span><span class="kt">real </span><span class="n">fac</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(.</span><span class="nb">not</span><span class="p">.(</span><span class="n">ltimedepsw</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">myid</span><span class="o">==</span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="k">return</span>
+
+<span class="k">    if</span><span class="w"> </span><span class="p">((</span><span class="n">rk3step</span><span class="w"> </span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="p">(</span><span class="n">timee</span><span class="w"> </span><span class="p">.</span><span class="n">ge</span><span class="p">.</span><span class="w"> </span><span class="n">tnextEB</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+
+<span class="w">    </span><span class="c">! if (myid == 0) then</span>
+<span class="w">    </span><span class="c">!  write(*,*) &quot;EB coming up so changing solar position&quot;</span>
+<span class="w">    </span><span class="c">! end if</span>
+
+<span class="w">    </span><span class="c">!---- interpolate ----</span>
+<span class="w">    </span><span class="k">do </span><span class="n">t</span><span class="o">=</span><span class="n">ntimedepsw</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">timee</span><span class="w"> </span><span class="p">.</span><span class="n">ge</span><span class="p">.</span><span class="w"> </span><span class="n">timesw</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        exit</span>
+<span class="k">      endif</span>
+<span class="k">    end do</span>
+
+<span class="k">    if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="p">.</span><span class="n">ne</span><span class="p">.</span><span class="w"> </span><span class="n">ntimedepsw</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">      </span><span class="n">fac</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">timee</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">timesw</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">timesw</span><span class="p">(</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">timesw</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="w">      </span><span class="k">do </span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">nfcts</span>
+<span class="w">         </span><span class="n">netsw</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">netswt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fac</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">netswt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">netswt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">t</span><span class="p">))</span>
+<span class="w">      </span><span class="k">end do</span>
+<span class="k">    end if</span>
+
+<span class="k">    end if</span>
+
+<span class="k">  end subroutine </span><span class="n">timedepsw</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              uDALES
+ was developed by The uDALES Team<br>              &copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-08-29 16:19              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
